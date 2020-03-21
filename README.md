@@ -2,7 +2,11 @@
   <img src="https://github.com/nickkunz/nestedhyperboost/blob/master/media/images/nestedhyperboost_banner.png">
 </div>
 
-## NestedHyperBoost: Nested Cross-Validation for Bayesian Optimized Gradient Boosting
+## Nested Cross-Validation for Bayesian Optimized Gradient Boosting
+[![PyPI version](https://badge.fury.io/py/nestedhyperboost.svg)](https://badge.fury.io/py/nestedhyperboost)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Build Status](https://travis-ci.com/nickkunz/nestedhyperboost.svg?branch=master)](https://travis-ci.com/nickkunz/nestedhyperboost)
+![GitHub last commit](https://img.shields.io/github/last-commit/nickkunz/nestedhyperboost)
 
 ## Description
 A Python implementation that unifies Nested K-Fold Cross-Validation, Bayesian Hyperparameter Optimization, and Gradient Boosting. Designed for rapid prototyping on small to mid-sized data sets (can be manipulated within memory). Quickly obtains high quality prediction results by abstracting away tedious hyperparameter tuning and implementation details in favor of usability and implementation speed. Bayesian Hyperparamter Optimization utilizes Tree Parzen Estimation (TPE) from the <a href="https://github.com/hyperopt/hyperopt">Hyperopt</a> package. Gradient Boosting can be conducted one of three ways. Select between <a href="https://github.com/dmlc/xgboost">XGBoost</a>, <a href="https://github.com/microsoft/LightGBM">LightGBM</a>, or <a href="https://github.com/catboost/catboost">CatBoost</a>. <a href="https://github.com/dmlc/xgboost">XGBoost</a> is applied using traditional Gradient Tree Boosting (GTB). <a href="https://github.com/microsoft/LightGBM">LightGBM</a> is applied using its novel Gradient Based One Sided Sampling (GOSS). <a href="https://github.com/catboost/catboost">CatBoost</a> is applied usings its novel Ordered Boosting. NestedHyperBoost can be applied to regression, multi-class classification, and binary classification problems.
