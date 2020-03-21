@@ -90,5 +90,5 @@ https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf.
 
 Ke, G., Meng, Q., Finley, T., et al. (2017). LightGBM: A Highly Efficient Gradient Boosting Decision Tree. Proceedings of the 31st International Conference on Neural Information Processing Systems. 3146-3154. https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree.pdf.
 
-Prokhorenkova, L., Gusev, G., Vorobev1, A., et al. (2018). CatBoost: Unbiased Boosting with Categorical Features. Proceedings of the 32nd International Conference on Neural Information Processing Systems. 6639–6649.
+Prokhorenkova, L., Gusev, G., Vorobev, A., et al. (2018). CatBoost: Unbiased Boosting with Categorical Features. Proceedings of the 32nd International Conference on Neural Information Processing Systems. 6639–6649.
 http://learningsys.org/nips17/assets/papers/paper_11.pdf.
