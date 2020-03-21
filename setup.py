@@ -22,7 +22,7 @@ setup(
     keywords = [
         'nested cross-validation',
         'bayesian optimization',
-        'gradient boosting'
+        'gradient boosting',
         'xgboost',
         'lightgbm',
         'catboost'
@@ -31,8 +31,8 @@ setup(
     packages = ['nestedhyperboost'],
     include_package_data = False,
     install_requires = [
-        'numpy', 
-        'pandas', 
+        'numpy',
+        'pandas',
         'matplotlib',
         'sklearn',
         'hyperopt',
