@@ -1,0 +1,17 @@
+NHB-0.0.0: 2020-03-01
+==========================
+- Research & Review
+- Pre-Development & Planning
+
+NHB-0.0.0: 2020-03-20
+==========================
+- Base Code Completion
+- Code Comments
+- Initial Testing
+- Beta Versioning
+
+NHB-0.0.1: 2020-03-21
+==========================
+- GPLv3 License Declaration
+- First Git commit
+- PyPI Distribution

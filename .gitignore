@@ -1,0 +1,8 @@
+build/
+dist/
+nestedhyperboost.egg-info/
+.eggs
+.git
+.Rproj.user
+.Rhistory
+nestedhyperboost.Rproj

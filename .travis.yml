@@ -1,0 +1,27 @@
+language: python
+
+python:
+  - 3.4
+  - 3.5
+  - 3.6
+  - 3.7
+  - 3.8
+  
+install:
+  - pip install numpy
+  - pip install pandas
+  - pip install matplotlib
+  - pip install sklearn
+  - pip install hyperopt
+  - pip install xgboost
+  - pip install lightgbm
+  - pip install catboost
+  - pip install coverage
+ 
+script: 
+  - python setup.py test
+  - coverage run -m unittest discover
+
+notifications:
+    on_success: always
+    on_failure: never
