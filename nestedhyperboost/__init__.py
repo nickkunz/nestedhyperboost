@@ -14,16 +14,16 @@ from nestedhyperboost.results import MultiClassResults
 from nestedhyperboost.results import BinaryClassResults
 
 ## xgboost
-from nestedhyperboost.xgboost import xgb_ncv_regressor
-from nestedhyperboost.xgboost import xgb_ncv_classifier
-from nestedhyperboost.xgboost import xgb_params
+from nestedhyperboost.xgboost.xgb_ncv_classifier import xgb_ncv_classifier
+from nestedhyperboost.xgboost.xgb_ncv_regressor import xgb_ncv_regressor
+from nestedhyperboost.xgboost.xgb_params import xgb_params
 
 ## lightgbm
-from nestedhyperboost.lightgbm import lgb_ncv_regressor
-from nestedhyperboost.lightgbm import lgb_ncv_classifier
-from nestedhyperboost.lightgbm import lgb_params
+from nestedhyperboost.lightgbm.lgb_ncv_classifier import lgb_ncv_classifier
+from nestedhyperboost.lightgbm.lgb_ncv_regressor import lgb_ncv_regressor
+from nestedhyperboost.lightgbm.lgb_params import lgb_params
 
 ## catboost
-from nestedhyperboost.catboost import cat_ncv_regressor
-from nestedhyperboost.catboost import cat_ncv_classifier
-from nestedhyperboost.catboost import cat_params
+from nestedhyperboost.catboost.cat_ncv_classifier import cat_ncv_classifier
+from nestedhyperboost.catboost.cat_ncv_regressor import cat_ncv_regressor
+from nestedhyperboost.catboost.cat_params import cat_params
