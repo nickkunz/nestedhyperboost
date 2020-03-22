@@ -13,6 +13,6 @@ from .results import BinaryClassResults
 from .argument_quality import ArgumentQuality
 from .argument_quality import ArgumentQualityOptimizer
 
-from . import xgb
-from . import lgb
-from . import cat
+from xgb import *
+from lgb import *
+from cat import *
