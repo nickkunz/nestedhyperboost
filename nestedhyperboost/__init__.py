@@ -11,4 +11,4 @@ from .results import RegressResults
 from .results import MultiClassResults
 from .results import BinaryClassResults
 
-from .xgboost.xgb_ncv_regressor import xgb_ncv_regressor
+__all__ = ["xgboost", "lightgbm", "catboost"]
