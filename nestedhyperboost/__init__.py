@@ -14,6 +14,6 @@ from .results import MultiClassResults
 from .results import BinaryClassResults
 
 ## xgboost
-from xgboost.xgb_ncv_classifier import xgb_ncv_classifier
-from xgboost.xgb_ncv_regressor import xgb_ncv_regressor
-from xgboost.xgb_params import xgb_params
+from xgboost import xgb_ncv_classifier
+from xgboost import xgb_ncv_regressor
+from xgboost import xgb_params
