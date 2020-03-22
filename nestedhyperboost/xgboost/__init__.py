@@ -7,6 +7,6 @@ https://github.com/dmlc/xgboost
 """
 
 ## xgboost
-from nestedhyperboost.xgboost import xgb_ncv_classifier
-from nestedhyperboost.xgboost import xgb_ncv_regressor
-from nestedhyperboost.xgboost import xgb_params
+from nestedhyperboost.xgboost.xgb_ncv_classifier import xgb_ncv_classifier
+from nestedhyperboost.xgboost.xgb_ncv_regressor import xgb_ncv_regressor
+from nestedhyperboost.xgboost.xgb_params import xgb_params
