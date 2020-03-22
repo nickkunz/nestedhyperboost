@@ -1,10 +1,8 @@
 """
 Nested Cross-Validation for Bayesian Hyper-Parameter Optimized Gradient Boosting
-
 https://github.com/nickkunz/nestedhyperboost
 """
 
-## global
 from .argument_quality import ArgumentQuality
 from .argument_quality import ArgumentQualityOptimizer
 from .method_select import method_select
