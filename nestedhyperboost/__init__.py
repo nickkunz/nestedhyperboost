@@ -10,5 +10,6 @@ from .ncv_optimizer import ncv_optimizer
 from .results import RegressResults
 from .results import MultiClassResults
 from .results import BinaryClassResults
+from . import *
 
 __all__ = ["xgboost", "lightgbm", "catboost"]
