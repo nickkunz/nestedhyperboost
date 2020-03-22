@@ -3,11 +3,10 @@
 </div>
 
 ## Nested Cross-Validation for Bayesian Optimized Gradient Boosting
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8d3b4a3d156c4c7f9c62ac540782efd6)](https://app.codacy.com/manual/nickkunz/nestedhyperboost?utm_source=github.com&utm_medium=referral&utm_content=nickkunz/nestedhyperboost&utm_campaign=Badge_Grade_Dashboard)
 [![PyPI version](https://badge.fury.io/py/nestedhyperboost.svg)](https://badge.fury.io/py/nestedhyperboost)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Build Status](https://travis-ci.com/nickkunz/nestedhyperboost.svg?branch=master)](https://travis-ci.com/nickkunz/nestedhyperboost)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/14c3e0cd690e46b98dbbec39aeec72d7)](https://www.codacy.com/manual/nickkunz/nestedhyperboost?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nickkunz/nestedhyperboost&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8d3b4a3d156c4c7f9c62ac540782efd6)](https://app.codacy.com/manual/nickkunz/nestedhyperboost?utm_source=github.com&utm_medium=referral&utm_content=nickkunz/nestedhyperboost&utm_campaign=Badge_Grade_Dashboard)
 ![GitHub last commit](https://img.shields.io/github/last-commit/nickkunz/nestedhyperboost)
 
 ## Description
