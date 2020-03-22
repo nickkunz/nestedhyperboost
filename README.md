@@ -3,6 +3,7 @@
 </div>
 
 ## Nested Cross-Validation for Bayesian Optimized Gradient Boosting
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8d3b4a3d156c4c7f9c62ac540782efd6)](https://app.codacy.com/manual/nickkunz/nestedhyperboost?utm_source=github.com&utm_medium=referral&utm_content=nickkunz/nestedhyperboost&utm_campaign=Badge_Grade_Dashboard)
 [![PyPI version](https://badge.fury.io/py/nestedhyperboost.svg)](https://badge.fury.io/py/nestedhyperboost)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Build Status](https://travis-ci.com/nickkunz/nestedhyperboost.svg?branch=master)](https://travis-ci.com/nickkunz/nestedhyperboost)
