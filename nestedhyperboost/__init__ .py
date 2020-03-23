@@ -12,7 +12,3 @@ from .results import BinaryClassResults
 
 from .argument_quality import ArgumentQuality
 from .argument_quality import ArgumentQualityOptimizer
-
-from .xgboost.xgb_ncv_classifier import xgb_ncv_classifier
-from .xgboost.xgb_ncv_regressor import xgb_ncv_regressor
-from .xgboost.xgb_params import xgb_params
