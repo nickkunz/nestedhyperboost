@@ -66,7 +66,6 @@ results.prfs_mean()
 
 ## preview plots
 results.feat_plot()
-results.conf_mtrx_plot()
 
 ## model and params
 model = results.model
