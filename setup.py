@@ -1,7 +1,6 @@
 from setuptools import setup
 
 setup(
-    
     name = 'nestedhyperboost',
     version = '0.0.1',
     description = 'A wrapper for conducting Nested Cross-Validation with Bayesian Hyper-Parameter Optimized Gradient Boosting',
@@ -18,7 +17,6 @@ setup(
         'Topic :: Scientific/Engineering :: Artificial Intelligence',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
         ],
-    
     keywords = [
         'nested cross-validation',
         'bayesian optimization',
@@ -27,7 +25,6 @@ setup(
         'lightgbm',
         'catboost'
     ],
-    
     packages = ['nestedhyperboost'],
     include_package_data = False,
     install_requires = [
