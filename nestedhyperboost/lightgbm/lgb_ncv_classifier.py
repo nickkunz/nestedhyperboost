@@ -8,14 +8,14 @@ from nestedhyperboost.ncv_optimizer import ncv_optimizer
 ## lightgbm classification
 def lgb_ncv_classifier(
     
-    data,          ## pandas dataframe, clean (no nan's)
-    y,             ## string, header of y reponse variable
-    loss = None,   ## string, objective function to minimize
-    k_outer = 5,   ## pos int, k number of outer folds (1 < k < n)
-    k_inner = 5,   ## pos int, k number of inner folds (1 < k < n)
+    data,  ## pandas dataframe, clean (no nan's)
+    y,  ## string, header of y reponse variable
+    loss = "default",  ## string, objective function to minimize
+    k_outer = 5,  ## pos int, k number of outer folds (1 < k < n)
+    k_inner = 5,  ## pos int, k number of inner folds (1 < k < n)
     n_evals = 25,  ## pos int, number of evals for bayesian optimization
     seed = rd.randint(0, 9999),  ## pos int, fix for reproduction
-    verbose = True               ## bool, display output
+    verbose = True  ## bool, display output
     ):
     
     ## conduct input quality checks
@@ -51,13 +51,13 @@ def lgb_ncv_classifier(
         pred_type = "multi-class"
         params["num_class"] = len(data[y].unique())
         
-        if loss is None:
+        if loss is "default":
             loss = "multi:softmax"
     
     if num_uni_val == 2:
         pred_type = "binary"
         
-        if loss is None:
+        if loss is "default":
             loss = "binary"
     
     if num_uni_val == 1:

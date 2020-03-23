@@ -8,14 +8,14 @@ from nestedhyperboost.ncv_optimizer import ncv_optimizer
 ## catboost classification
 def cat_ncv_classifier(
     
-    data,          ## pandas dataframe
-    y,             ## string, header of y reponse variable
-    loss = None,   ## string, objective function to minimize
-    k_outer = 5,   ## pos int, k number of outer folds (1 < k < n)
-    k_inner = 5,   ## pos int, k number of inner folds (1 < k < n)
+    data,  ## pandas dataframe
+    y,  ## string, header of y reponse variable
+    loss = "default",  ## string, objective function to minimize
+    k_outer = 5,  ## pos int, k number of outer folds (1 < k < n)
+    k_inner = 5,  ## pos int, k number of inner folds (1 < k < n)
     n_evals = 25,  ## pos int, number of evals for bayesian optimization
     seed = rd.randint(0, 9999),  ## pos int, fix for reproduction
-    verbose = True               ## bool, display output
+    verbose = True  ## bool, display output
     ):
     
     ## conduct input quality checks
@@ -50,13 +50,13 @@ def cat_ncv_classifier(
     if num_uni_val > 2:
         pred_type = "multi-class"
         
-        if loss is None:
+        if loss is "default":
             loss = "MultiClass"
     
     if num_uni_val == 2:
         pred_type = "binary"
         
-        if loss is None:
+        if loss is "default":
             loss = "LogLoss"
     
     if num_uni_val == 1:
