@@ -1,17 +1,24 @@
 NHB-0.0.0: 2020-03-01
 ==========================
-- Research & Review
-- Pre-Development & Planning
+- Research & lit review
+- Pre-dev & planning
 
 NHB-0.0.0: 2020-03-20
 ==========================
-- Base Code Completion
-- Code Comments
-- Initial Testing
-- Beta Versioning
+- Base code completion
+- Code comments
+- Initial testing
+- Beta versioning
 
 NHB-0.0.1: 2020-03-21
 ==========================
-- GPLv3 License Declaration
-- First Git commit
-- PyPI Distribution
+- GPLv3 license declaration
+- First git commit
+- PyPI distribution
+
+NHB-0.0.2: 2020-03-22
+==========================
+- Fix subdirectory imports
+- Conduct CI
+- Conduct code review
+- Update README

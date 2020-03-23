@@ -41,17 +41,17 @@ pip install git+https://github.com/nickkunz/nestedhyperboost.git
 ## Usage
 ```python
 ## load libraries
-import nestedhyperboost
-import sklearn
+from nestedhyperboost import xgboost
+from sklearn import datasets
 import pandas
 
 ## load data
-data = sklearn.datasets.load_iris()
-data = pandas.DataFrame(data.data, columns = data.feature_names)
+data_sklearn = datasets.load_iris()
+data = pandas.DataFrame(data_sklearn.data, columns = data_sklearn.feature_names)
 data['target'] = pandas.Series(data_sklearn.target)
 
 ## conduct nestedhyperboost
-results = nestedhyperboost.xgb_ncv_classifier(
+results = xgboost.xgb_ncv_classifier(
     data = data,
     y = 'target',
     k_inner = 5,
