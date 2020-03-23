@@ -57,7 +57,7 @@ def cat_ncv_classifier(
         pred_type = "binary"
         
         if loss is "default":
-            loss = "LogLoss"
+            loss = "Logloss"
     
     if num_uni_val == 1:
         print("y response variable values are constant")
