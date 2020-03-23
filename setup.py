@@ -25,7 +25,7 @@ setup(
         'lightgbm',
         'catboost'
     ],
-    packages = ['nestedhyperboost'],
+    packages = find_packages(),
     include_package_data = False,
     install_requires = [
         'numpy',
