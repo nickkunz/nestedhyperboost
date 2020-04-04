@@ -20,12 +20,12 @@ def xgb_ncv_classifier(
     
     ## conduct input quality checks
     ArgumentQuality(
-        data = data, 
+        data = data,
         y = y,
         loss = loss,
         k_outer = k_outer,
-        k_inner = k_inner, 
-        n_evals = n_evals, 
+        k_inner = k_inner,
+        n_evals = n_evals,
         seed = seed,
         verbose = verbose
     )
@@ -65,7 +65,7 @@ def xgb_ncv_classifier(
         n_evals = n_evals,
         seed = seed,
         verbose = verbose,
-        
+    
         ## pred func args
         pred_type = pred_type,
         method = method,

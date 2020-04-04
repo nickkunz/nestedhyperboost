@@ -47,7 +47,7 @@ def lgb_ncv_regressor(
         n_evals = n_evals,
         seed = seed,
         verbose = verbose,
-        
+    
         ## pred func args
         pred_type = pred_type,
         method = method,
