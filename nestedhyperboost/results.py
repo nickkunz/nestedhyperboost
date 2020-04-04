@@ -172,7 +172,7 @@ class BinaryClassResults(MultiClassResults):
         child class to MultiClassResults object, utilized to calculate and
         store the roc curve plot, as well as all the attributes from the
         parent MultiClassResults object, returned to main function
-        ncv_optimizer() when 'pred' argument is specified "binary"
+        ncv_optimizer() when 'pred' argument is specified 'binary'
         """
         
         self.k_outer = k_outer
