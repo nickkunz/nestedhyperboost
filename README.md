@@ -13,8 +13,8 @@
 A Python implementation that unifies Nested K-Fold Cross-Validation, Bayesian Hyperparameter Optimization, and Gradient Boosting. Designed for rapid prototyping on small to mid-sized data sets (can be manipulated within memory). Quickly obtains high quality prediction results by abstracting away tedious hyperparameter tuning and implementation details in favor of usability and implementation speed. Bayesian Hyperparamter Optimization utilizes Tree Parzen Estimation (TPE) from the <a href="https://github.com/hyperopt/hyperopt">Hyperopt</a> package. Gradient Boosting can be conducted one of three ways. Select between <a href="https://github.com/dmlc/xgboost">XGBoost</a>, <a href="https://github.com/microsoft/LightGBM">LightGBM</a>, or <a href="https://github.com/catboost/catboost">CatBoost</a>. <a href="https://github.com/dmlc/xgboost">XGBoost</a> is applied using traditional Gradient Tree Boosting (GTB). <a href="https://github.com/microsoft/LightGBM">LightGBM</a> is applied using its novel Gradient Based One Sided Sampling (GOSS). <a href="https://github.com/catboost/catboost">CatBoost</a> is applied usings its novel Ordered Boosting. NestedHyperBoost can be applied to regression, multi-class classification, and binary classification problems.
 
 ## Features
-1. Consistent arguments across all Gradient Boosting methods
-2. Gradient Boosting methods include: <a href="https://github.com/dmlc/xgboost">XGBoost</a>, <a href="https://github.com/microsoft/LightGBM">LightGBM</a>, <a href="https://github.com/catboost/catboost">CatBoost</a>
+1. Consistent syntax across all Gradient Boosting methods.
+2. Supported Gradient Boosting methods: <a href="https://github.com/dmlc/xgboost">XGBoost</a>, <a href="https://github.com/microsoft/LightGBM">LightGBM</a>, <a href="https://github.com/catboost/catboost">CatBoost</a>.
 3. Returns custom object that includes common performance metrics and plots.
 4. Developed for readability, maintainability, and future improvement.
 
