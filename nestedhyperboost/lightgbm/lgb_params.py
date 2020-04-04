@@ -69,8 +69,8 @@ def lgb_params():
         ),
         
         'reg_lambda': hp.uniform(
-            label = 'reg_lambda', 
-            low = 0.00, 
+            label = 'reg_lambda',
+            low = 0.00,
             high = 2.00
         ),
         
@@ -81,5 +81,5 @@ def lgb_params():
         )
     
     }
-    
+
     return lgb_params
