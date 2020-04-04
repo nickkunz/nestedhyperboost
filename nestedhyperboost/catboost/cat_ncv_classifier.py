@@ -7,7 +7,7 @@ from nestedhyperboost.ncv_optimizer import ncv_optimizer
 
 ## catboost classification
 def cat_ncv_classifier(
-    
+
     data,  ## pandas dataframe
     y,  ## string, header of y reponse variable
     loss = "default",  ## string, objective function to minimize
@@ -17,7 +17,7 @@ def cat_ncv_classifier(
     seed = rd.randint(0, 9999),  ## pos int, fix for reproduction
     verbose = True  ## bool, display output
     ):
-    
+
     ## conduct input quality checks
     ArgumentQuality(
         data = data,
@@ -29,32 +29,32 @@ def cat_ncv_classifier(
         seed = seed,
         verbose = verbose
     )
-    
+
     ## initiate modeling method
     method = CatBoostClassifier
     params = cat_params()
-    
+
     ## initiate prediction type
     num_uni_val = len(data[y].unique())
-    
+
     if num_uni_val > 2:
         pred_type = "multi-class"
-        
+
         if loss == "default":
             loss = "MultiClass"
-    
+
     if num_uni_val == 2:
         pred_type = "binary"
-        
+
         if loss == "default":
             loss = "Logloss"
-    
+
     if num_uni_val == 1:
         raise ValueError("y response variable values are constant")
-    
+
     ## nested cross-valid bayesian hyper-param optimization
     ncv_results = ncv_optimizer(
-        
+
         ## main func args
         data = data,
         y = y,
