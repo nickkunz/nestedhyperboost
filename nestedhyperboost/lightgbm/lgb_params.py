@@ -5,20 +5,20 @@ from hyperopt import hp
 ## lightgbm hyper-params
 def lgb_params():
     
-    """ utilized for bayesian hyper-parameter optimization, 
+    """ utilized for bayesian hyper-parameter optimization,
     returns lightgbm parameter ranges (search space) """
     
     lgb_params = {
         
         'num_leaves': hp.quniform(
-            label = 'num_leaves', 
+            label = 'num_leaves',
             low = 2,
             high = 100,
             q = 1
         ),
         
         'learning_rate': hp.loguniform(
-            label = 'learning_rate', 
+            label = 'learning_rate',
             low = np.log(0.001),
             high = np.log(0.300)
         ),
@@ -75,8 +75,8 @@ def lgb_params():
         ),
         
         'reg_alpha': hp.uniform(
-            label = 'reg_alpha', 
-            low = 0.00, 
+            label = 'reg_alpha',
+            low = 0.00,
             high = 2.00
         )
     

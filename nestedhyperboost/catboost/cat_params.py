@@ -5,13 +5,13 @@ from hyperopt import hp
 ## catboost hyper-params
 def cat_params():
     
-    """ utilized for bayesian hyper-parameter optimization, 
+    """ utilized for bayesian hyper-parameter optimization,
     returns catboost parameter ranges (search space) """
     
     cat_params = {
         
         'learning_rate': hp.loguniform(
-            label = 'learning_rate', 
+            label = 'learning_rate',
             low = np.log(0.001),
             high = np.log(0.300)
         ),
@@ -68,8 +68,8 @@ def cat_params():
         ),
         
         'reg_lambda': hp.uniform(
-            label = 'reg_lambda', 
-            low = 0.00, 
+            label = 'reg_lambda',
+            low = 0.00,
             high = 12.00
         )
     

@@ -41,13 +41,13 @@ def lgb_ncv_classifier(
         pred_type = "multi-class"
         params["num_class"] = len(data[y].unique())
         
-        if loss is "default":
+        if loss == "default":
             loss = "multi:softmax"
     
     if num_uni_val == 2:
         pred_type = "binary"
         
-        if loss is "default":
+        if loss == "default":
             loss = "binary"
     
     if num_uni_val == 1:

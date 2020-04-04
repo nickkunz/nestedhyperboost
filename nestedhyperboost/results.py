@@ -14,7 +14,7 @@ class Results():
         parent to all three results objects: 1) RegressResults,
         2) MultiClassResults, 3) BinaryClassResults
         
-        utilized to store bayesian optimized hyper-parameters and model, 
+        utilized to store bayesian optimized hyper-parameters and model,
         also creates feature importance plot for all returned objects
         """
         
@@ -38,9 +38,9 @@ class RegressResults(Results):
         super().__init__(trials, model, params)
         
         """
-        child to Results object, utilized to calculate and store the average 
+        child to Results object, utilized to calculate and store the average
         of all outer k-fold cross-validation root mean squared errors, as well
-        as all the attributes from the parent Results object, returned to main 
+        as all the attributes from the parent Results object, returned to main
         function ncv_optimizer()
         """
         
@@ -66,8 +66,8 @@ class MultiClassResults(Results):
         """
         child class to Results object, utilized to calculate and store the
         average of all outer k-fold cross-validation accuracy scores, the
-        precision-recall-f1-support table, confusion matrix, and confusion 
-        matrix plot, as well as all the attributes from the parent Results 
+        precision-recall-f1-support table, confusion matrix, and confusion
+        matrix plot, as well as all the attributes from the parent Results
         object
         """
         
@@ -163,15 +163,15 @@ class MultiClassResults(Results):
 
 ## store binary classification results
 class BinaryClassResults(MultiClassResults):
-    def __init__(self, trials, model, params, accu_list, prfs_list, x_data, 
+    def __init__(self, trials, model, params, accu_list, prfs_list, x_data,
                  y_labels, y_test_list, y_pred_list, k_outer, roc_table):
-        super().__init__(trials, model, params, accu_list, prfs_list, 
+        super().__init__(trials, model, params, accu_list, prfs_list,
                          x_data, y_labels, y_test_list, y_pred_list)
         
         """
-        child class to MultiClassResults object, utilized to calculate and 
-        store the roc curve plot, as well as all the attributes from the 
-        parent MultiClassResults object, returned to main function 
+        child class to MultiClassResults object, utilized to calculate and
+        store the roc curve plot, as well as all the attributes from the
+        parent MultiClassResults object, returned to main function
         ncv_optimizer() when 'pred' argument is specified "binary"
         """
         
@@ -190,11 +190,11 @@ class BinaryClassResults(MultiClassResults):
         plt.margins(y = 0, x = 0)
         plt.grid()
         
-        ## plot roc curve 
+        ## plot roc curve
         for i in self.roc_table.index:
             plt.plot(
-                self.roc_table.loc[i]['fpr'], 
-                self.roc_table.loc[i]['tpr'], 
+                self.roc_table.loc[i]['fpr'],
+                self.roc_table.loc[i]['tpr'],
                 label = "Fold {}, AUC = {:.3f}".format(
                     i, self.roc_table.loc[i]['auc']
                 )
@@ -202,8 +202,8 @@ class BinaryClassResults(MultiClassResults):
         
         ## baseline
         plt.plot(
-            [0,1], [0,1], 
-            color = 'black', 
+            [0,1], [0,1],
+            color = 'black',
             linestyle = '--',
             linewidth = 1
         )

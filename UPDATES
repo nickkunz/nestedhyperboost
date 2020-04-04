@@ -27,3 +27,4 @@ NHB-0.0.3: 2020-04-03
 ==========================
 - Update input error checks
 - Fix imports
+- Clean code

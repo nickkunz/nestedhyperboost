@@ -20,12 +20,12 @@ def xgb_ncv_regressor(
     
     ## conduct input quality checks
     ArgumentQuality(
-        data = data, 
+        data = data,
         y = y,
         loss = loss,
         k_outer = k_outer,
-        k_inner = k_inner, 
-        n_evals = n_evals, 
+        k_inner = k_inner,
+        n_evals = n_evals,
         seed = seed,
         verbose = verbose
     )
@@ -39,13 +39,13 @@ def xgb_ncv_regressor(
     ncv_results = ncv_optimizer(
         
         ## main func args
-        data = data, 
+        data = data,
         y = y,
         loss = loss,
         k_outer = k_outer,
         k_inner = k_inner,
         n_evals = n_evals,
-        seed = seed, 
+        seed = seed,
         verbose = verbose, 
         
         ## pred func args

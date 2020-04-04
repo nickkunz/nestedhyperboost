@@ -1,7 +1,6 @@
 ## load libraries
 import numpy as np
 import pandas as pd
-import random as rd
 import warnings as wn
 
 ## mested k-fold cross-validation
@@ -20,7 +19,7 @@ from sklearn.metrics import roc_curve, roc_auc_score
 ## internal
 from nestedhyperboost.argument_quality import ArgumentQualityOptimizer
 from nestedhyperboost.results import RegressResults
-from nestedhyperboost.results import MultiClassResults 
+from nestedhyperboost.results import MultiClassResults
 from nestedhyperboost.results import BinaryClassResults
 from nestedhyperboost.method_select import method_select
 
@@ -34,24 +33,24 @@ def ncv_optimizer(
     pred_type, method, params
     ):
     
-    """ 
-    main underlying function, designed for rapid prototyping, quickly obtain 
+    """
+    main underlying function, designed for rapid prototyping, quickly obtain
     prediction results by compromising implementation details and flexibility
     
-    can be applied to regression, multi-class classification, and binary 
-    classification problems, unifies three important supervised learning 
+    can be applied to regression, multi-class classification, and binary
+    classification problems, unifies three important supervised learning
     techniques for structured data:
     
     1) nested k-fold cross validation (minimize bias)
     2) bayesian optimization (efficient hyper-parameter tuning)
     3) gradient boosting (flexible and extensive prediction)
 
-    bayesian hyper-parameter optimization is conducted utilizing tree prezen 
+    bayesian hyper-parameter optimization is conducted utilizing tree prezen
     estimation, gradient boosting is conducted utilizing user specified methods
     
     returns custom object depending on the type of prediction
     - regressor: root mean squared error (or other regression metric)
-    - classifier: accuracy, prec-recall-f1-support, confusion matrix, roc auc 
+    - classifier: accuracy, prec-recall-f1-support, confusion matrix, roc auc
     - all cases: feature importance plot, hyperopt trials object
     """
     
@@ -59,14 +58,14 @@ def ncv_optimizer(
     ArgumentQualityOptimizer(
         
         ## main func args
-        data = data, 
+        data = data,
         y = y,
         loss = loss,
         k_outer = k_outer,
         k_inner = k_inner,
         n_evals = n_evals,
-        seed = seed, 
-        verbose = verbose, 
+        seed = seed,
+        verbose = verbose,
         
         ## pred func args
         pred_type = pred_type,
@@ -76,18 +75,18 @@ def ncv_optimizer(
     
     ## suppress warning messages
     wn.filterwarnings(
-        action = 'ignore', 
+        action = 'ignore',
         category = DeprecationWarning
     )
     
     wn.filterwarnings(
-        action = 'ignore', 
+        action = 'ignore',
         category = FutureWarning
     )
     
     ## reset data index
     data.reset_index(
-        inplace = True, 
+        inplace = True,
         drop = True
     )
     
@@ -159,8 +158,8 @@ def ncv_optimizer(
             
             ## inner loop cross-valid
             cv_scores = cross_val_score(
-                estimator = model, 
-                X = x_train_valid, 
+                estimator = model,
+                X = x_train_valid,
                 y = y_train_valid,
                 cv = cv_type
             )
@@ -200,7 +199,7 @@ def ncv_optimizer(
         
         ## train on entire training-validation set
         model_opt = model_opt.fit(
-            X = x_train_valid, 
+            X = x_train_valid,
             y = y_train_valid
         )
         
@@ -253,7 +252,7 @@ def ncv_optimizer(
                 )
                 
                 auc = roc_auc_score(
-                    y_true = y_test, 
+                    y_true = y_test,
                     y_score = y_pred
                 )
                 

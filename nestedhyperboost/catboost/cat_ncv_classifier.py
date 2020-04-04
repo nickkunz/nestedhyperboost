@@ -40,13 +40,13 @@ def cat_ncv_classifier(
     if num_uni_val > 2:
         pred_type = "multi-class"
         
-        if loss is "default":
+        if loss == "default":
             loss = "MultiClass"
     
     if num_uni_val == 2:
         pred_type = "binary"
         
-        if loss is "default":
+        if loss == "default":
             loss = "Logloss"
     
     if num_uni_val == 1:
