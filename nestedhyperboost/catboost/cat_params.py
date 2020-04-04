@@ -72,7 +72,7 @@ def cat_params():
             low = 0.00,
             high = 12.00
         )
-    
+
     }
 
     return cat_params

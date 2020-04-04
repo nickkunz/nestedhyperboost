@@ -91,7 +91,7 @@ def xgb_params():
             low = 0.00,
             high = 12.00
         )
-    
+
     }
 
     return xgb_params

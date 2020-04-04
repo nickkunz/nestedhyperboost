@@ -79,7 +79,7 @@ def lgb_params():
             low = 0.00,
             high = 2.00
         )
-    
+
     }
 
     return lgb_params
