@@ -15,7 +15,7 @@ class ArgumentQuality():
         self.verbose = verbose
         
         ## quality check for dataframe
-        if type(self.data) is not pd.DataFrame:
+        if isinstance(self.data, pd.DataFrame) is False:
              raise ValueError("must pass pandas dataframe into 'data' argument")
         
         ## quality check for missing values in dataframe
@@ -23,14 +23,14 @@ class ArgumentQuality():
              raise ValueError("dataframe cannot contain missing values")
         
         ## quality check for y
-        if type(self.y) is not str:
+        if isinstance(self.y, str) is False:
              raise ValueError("'y' must be a string")
         
         if self.y in self.data.columns.values is False:
              raise ValueError("'y' must be an header name (string) found in the dataframe")
         
         ## quality check for loss 
-        if type(self.loss) is not str:
+        if isinstance(self.loss, str) is False:
              raise ValueError("'loss' must be a string")
         
         ## quality check for k-fold outer argument
@@ -56,7 +56,7 @@ class ArgumentQuality():
              raise ValueError("'seed 'must be a positive integer")
         
         ## quality check for verbose
-        if type(self.verbose) is not bool:
+        if isinstance(self.verbose, bool) is False:
              raise ValueError("'verbose' must be boolean")
 
 ## create input quality checks for optimizer
@@ -72,7 +72,7 @@ class ArgumentQualityOptimizer(ArgumentQuality):
         ## quality check for pred
         if self.pred_type in ["regress", "multi-class", "binary"] is False:
              raise ValueError("'pred' must be 'regress' or 'multi-class' or 'binary'")
-        
+    
         ## quality check for dataframe
-        if type(self.params) is not dict:
+        if isinstance(self.params, dict) is False:
              raise ValueError("'params' must be a dictionary")
