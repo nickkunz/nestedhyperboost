@@ -50,7 +50,7 @@ def cat_ncv_classifier(
             loss = "Logloss"
     
     if num_uni_val == 1:
-        print("y response variable values are constant")
+        raise ValueError("y response variable values are constant")
     
     ## nested cross-valid bayesian hyper-param optimization
     ncv_results = ncv_optimizer(
