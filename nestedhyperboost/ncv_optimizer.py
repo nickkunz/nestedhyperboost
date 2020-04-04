@@ -56,7 +56,7 @@ def ncv_optimizer(
     """
     
     ## conduct input quality checks
-    qual_check = ArgumentQualityOptimizer(
+    ArgumentQualityOptimizer(
         
         ## main func args
         data = data, 
@@ -73,21 +73,6 @@ def ncv_optimizer(
         method = method,
         params = params
     )
-    
-    ## return checked arguments (main func args)
-    data = qual_check.data
-    y = qual_check.y
-    loss = qual_check.loss
-    k_outer = qual_check.k_outer
-    k_inner = qual_check.k_inner
-    n_evals = qual_check.n_evals
-    seed = qual_check.seed
-    verbose = qual_check.verbose
-    
-    ## return checked arguments (pred func args)
-    pred_type = qual_check.pred_type
-    method = qual_check.method
-    params = qual_check.params
     
     ## suppress warning messages
     wn.filterwarnings(
