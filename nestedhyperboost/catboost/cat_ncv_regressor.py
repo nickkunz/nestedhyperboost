@@ -45,7 +45,7 @@ def cat_ncv_regressor(
         k_outer = k_outer,
         k_inner = k_inner,
         n_evals = n_evals,
-        seed = seed, 
+        seed = seed,
         verbose = verbose,
         
         ## pred func args
@@ -53,6 +53,6 @@ def cat_ncv_regressor(
         method = method,
         params = params
     )
-    
+
     ## regression results object
     return ncv_results

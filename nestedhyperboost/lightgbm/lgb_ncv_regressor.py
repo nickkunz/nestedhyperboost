@@ -9,7 +9,7 @@ from nestedhyperboost.ncv_optimizer import ncv_optimizer
 def lgb_ncv_regressor(
     
     data,          ## pandas dataframe, clean (no nan's)
-    y,             ## string, header of y reponse variable 
+    y,             ## string, header of y reponse variable
     loss = "rmse", ## string, objective function to minimize
     k_outer = 5,   ## pos int, k number of outer folds (1 < k < n)
     k_inner = 5,   ## pos int, k number of inner folds (1 < k < n)
@@ -53,6 +53,6 @@ def lgb_ncv_regressor(
         method = method,
         params = params
     )
-    
+
     ## regression results object
     return ncv_results

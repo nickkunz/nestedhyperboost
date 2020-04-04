@@ -57,20 +57,20 @@ def xgb_ncv_classifier(
     ncv_results = ncv_optimizer(
         
         ## main func args
-        data = data, 
+        data = data,
         y = y,
         loss = loss,
         k_outer = k_outer,
         k_inner = k_inner,
         n_evals = n_evals,
-        seed = seed, 
-        verbose = verbose, 
+        seed = seed,
+        verbose = verbose,
         
         ## pred func args
         pred_type = pred_type,
         method = method,
         params = params
     )
-    
+
     ## classification results object
     return ncv_results

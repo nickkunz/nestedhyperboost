@@ -46,13 +46,13 @@ def xgb_ncv_regressor(
         k_inner = k_inner,
         n_evals = n_evals,
         seed = seed,
-        verbose = verbose, 
+        verbose = verbose,
         
         ## pred func args
         pred_type = pred_type,
         method = method,
         params = params
     )
-    
+
     ## regression results object
     return ncv_results
