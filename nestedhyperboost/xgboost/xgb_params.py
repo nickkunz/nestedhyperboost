@@ -4,10 +4,10 @@ from hyperopt import hp
 
 ## xgboost hyper-params
 def xgb_params():
-    
+
     """ utilized for bayesian hyper-parameter optimization,
     returns xgboost parameter ranges (search space) """
-    
+
     xgb_params = {
 
         'learning_rate': hp.loguniform(
