@@ -9,7 +9,7 @@ from sklearn.model_selection import KFold, StratifiedKFold
 from sklearn.model_selection import cross_val_score
 
 ## bayesian hyper-parameter optimization and modeling
-from hyperopt import fmin, tpe, Trials, STATUS_OK, STATUS_FAIL
+from hyperopt import fmin, tpe, Trials, STATUS_OK
 
 ## performance evaluation
 from sklearn.metrics import precision_recall_fscore_support as prfs_score
