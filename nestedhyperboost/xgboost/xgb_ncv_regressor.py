@@ -19,7 +19,7 @@ def xgb_ncv_regressor(
     ):
     
     ## conduct input quality checks
-    qual_check = ArgumentQuality(
+    ArgumentQuality(
         data = data, 
         y = y,
         loss = loss,
@@ -29,16 +29,6 @@ def xgb_ncv_regressor(
         seed = seed,
         verbose = verbose
     )
-    
-    ## return checked arguments
-    data = qual_check.data
-    y = qual_check.y
-    loss = qual_check.loss
-    k_outer = qual_check.k_outer
-    k_inner = qual_check.k_inner
-    n_evals = qual_check.n_evals
-    seed = qual_check.seed
-    verbose = qual_check.verbose
     
     ## initiate modeling method and prediction type
     pred_type = "regress"
