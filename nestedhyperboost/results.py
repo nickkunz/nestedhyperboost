@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pylab as plt
+from xgboost import plot_importance, plot_tree
 
 ## store results
 class Results():
