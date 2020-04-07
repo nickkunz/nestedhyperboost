@@ -33,9 +33,8 @@ class Results():
     ## feature importance plot
     def tree_plot(self):
         plot_tree(
-            booster = self.model,
-            num_trees = 0
-        )
+            booster = self.model
+            )
 
 ## store regression results
 class RegressResults(Results):
