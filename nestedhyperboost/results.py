@@ -19,22 +19,22 @@ class Results():
         self.model = model
         self.params = params
         
-        ## feature importance plot
-        def feat_plot(self):
-            plot_importance(
-                booster = self.model,
-                max_num_features = 10,
-                title = 'Feature Importance',
-                color = 'purple',
-                grid = True
-            )
-        
-        ## feature importance plot
-        def tree_plot(self):
-            plot_tree(
-                booster = self.model,
-                num_trees = 0
-            )
+    ## feature importance plot
+    def feat_plot(self):
+        plot_importance(
+            booster = self.model,
+            max_num_features = 10,
+            title = 'Feature Importance',
+            color = 'purple',
+            grid = True
+        )
+    
+    ## feature importance plot
+    def tree_plot(self):
+        plot_tree(
+            booster = self.model,
+            num_trees = 0
+        )
 
 ## store regression results
 class RegressResults(Results):
