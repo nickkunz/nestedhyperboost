@@ -6,19 +6,19 @@ import matplotlib.pylab as plt
 ## store results
 class Results():
     def __init__(self, trials, model, params):
-        
+
         """
         parent to all three results objects: 1) RegressResults,
         2) MultiClassResults, 3) BinaryClassResults
-        
+
         utilized to store bayesian optimized hyper-parameters and model,
         also creates feature importance plot for all returned objects
         """
-        
+
         self.trials = trials
         self.model = model
         self.params = params
-        
+
     ## feature importance plot
     def feat_plot(self):
         plot_importance(
@@ -28,7 +28,7 @@ class Results():
             color = 'purple',
             grid = True
         )
-    
+
     ## feature importance plot
     def tree_plot(self):
         plot_tree(
